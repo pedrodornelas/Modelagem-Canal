@@ -11,7 +11,7 @@ freq_ghz = 3;
 c = 299792458; % m/s
 lambda = c / (freq_ghz * 1e9);
 % Multipath components
-N = 1000;
+N = 100;
 % Elevation Angle
 phi_bar = pi/4;
 % RX Velocity
@@ -24,6 +24,7 @@ v = 5; % m/s
 % Gaussian - only one sample to represent
 delay_spread_rms_log = normrnd(delay_mean, delay_std, [1,1]);
 delay_spread = 10^(delay_spread_rms_log);
+delay_spread = 0.00000088316;
 delay_spread_ns = 1e9*delay_spread
 
 %% Generate Delay Samples
