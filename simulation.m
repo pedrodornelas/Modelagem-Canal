@@ -11,7 +11,7 @@ freq_ghz = 3;
 c = 299792458; % m/s
 lambda = c / (freq_ghz * 1e9);
 % Multipath components
-N = 100;
+N = 1000;
 % Elevation Angle
 phi_bar = pi/4;
 % RX Velocity
