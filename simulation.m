@@ -369,8 +369,8 @@ semilogx(k, abs(autocorr_freq), 'Color', 'r', 'Linewidth', 1.5)
 hold on
 yline(0.95, '-.k', 'Linewidth', 1.5)
 yline(0.9, '--k', 'Linewidth', 1.5)
-idx_095_freq = find(autocorr_freq < 0.95, 1,'first');
-idx_090_freq = find(autocorr_freq < 0.9, 1, 'first');
+idx_095_freq = find(abs(autocorr_freq) < 0.95, 1,'first');
+idx_090_freq = find(abs(autocorr_freq) < 0.9, 1, 'first');
 xline(k(idx_095_freq), '-.k', 'Linewidth', 1.5)
 xline(k(idx_090_freq), '--k', 'Linewidth', 1.5)
 xlim([min(k), max(k)]);
@@ -387,8 +387,8 @@ semilogx(t, abs(autocorr_time), 'Color', 'r', 'Linewidth', 1.5)
 hold on
 yline(0.95, '-.k', 'Linewidth', 1.5)
 yline(0.9, '--k', 'Linewidth', 1.5)
-idx_095_time = find(autocorr_time < 0.95, 1, 'first');
-idx_090_time = find(autocorr_time < 0.9, 1, 'first');
+idx_095_time = find(abs(autocorr_time) < 0.95, 1, 'first');
+idx_090_time = find(abs(autocorr_time) < 0.9, 1, 'first');
 xline(t(idx_095_time), '-.k', 'Linewidth', 1.5)
 xline(t(idx_090_time), '--k', 'Linewidth', 1.5)
 xlim([min(t), max(t)]);
